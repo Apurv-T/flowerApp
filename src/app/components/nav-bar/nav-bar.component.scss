@@ -1,0 +1,33 @@
+.button-bar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 1.8rem;
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    button {
+      background-color: white;
+      color: black;
+      width: 8rem;
+      height: 2rem;
+      border: 1px solid black;
+      border-radius: 0.8rem;
+    }
+    button:disabled {
+      background-color: gray;
+      color: black;
+      cursor:not-allowed;
+    }
+    button:active {
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+    }
+  }
+}

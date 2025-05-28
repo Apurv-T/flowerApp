@@ -1,0 +1,14 @@
+<app-nav-bar (colorIdChanged)="changeColor($event)"></app-nav-bar>
+<div class="home-page">
+    <div class="pages">   
+      <h3>Page Number : {{pageNumber}}</h3>
+      <button (click)="nextPage()" [disabled]="imagesLinks.length==0">More Flowers</button>
+    </div>
+
+    <div class="images" *ngIf="imagesLinks.length>0; else loadingImages">
+    <img  *ngFor="let imgSrc of imagesLinks" [src]="imgSrc" alt="image not available"  onerror="">
+    </div>
+  <ng-template #loadingImages>
+    <h2>Images are loading....</h2>
+  </ng-template>
+</div>      

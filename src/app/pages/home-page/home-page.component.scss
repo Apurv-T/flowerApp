@@ -1,0 +1,40 @@
+.home-page {
+  width: 80%;
+  margin: 1rem auto;
+  .pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button {
+      background-color: black;
+      color: white;
+      padding: 0rem 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+    }
+    button:disabled {
+      background-color: gray;
+      color: black;
+      cursor: not-allowed;
+    }
+    button:active {
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+    }
+  }
+  .images {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    img {
+      width: 15rem;
+      height: 15rem;
+      border: 2px solid black;
+      border-radius: 0.8rem;
+    }
+  }
+}
