@@ -19,7 +19,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     //checking if there is a button from last session
-    if (localStorage.length > 0 && localStorage.getItem('buttonColor')) {
+    if (localStorage.length > 0 && localStorage.getItem('changeColor')) {
       this.colorId = Number(localStorage.getItem('changeColor'));
     }
     //calling the images service
@@ -49,6 +49,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
           this.imagesLinks = images;
         }));
     } else {
+      //images by color
           this.subscriptions.push(this.imageService
         .getFlowersByColor(this.colorId,this.pageNumber)
         .pipe()
